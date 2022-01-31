@@ -1,7 +1,61 @@
+.gradient0 {
+    background: linear-gradient(
+        -60deg,
+        rgb(92, 193, 224),
+        rgb(130, 90, 224) 33.33%,
+        rgb(92, 193, 224) 66.66%,
+        rgb(130, 90, 224) 100%
+    );
+    background-size: 300% 300%;
+}
+
+.gradient1 {
+    background: linear-gradient(
+        -60deg,
+        rgb(223, 164, 54),
+        rgb(224, 104, 67) 33.33%,
+        rgb(223, 164, 54) 66.66%,
+        rgb(224, 104, 67) 100%
+    );
+    background-size: 300% 300%;
+}
+
+.gradient2 {
+    background: linear-gradient(
+        -60deg,
+        rgb(30, 201, 135),
+        rgb(43, 136, 136) 33.33%,
+        rgb(30, 201, 135) 66.66%,
+        rgb(43, 136, 136) 100%
+    );
+    background-size: 300% 300%;
+}
+
+.gradient3 {
+    background: linear-gradient(
+        -60deg,
+        rgb(199, 76, 107),
+        rgb(136, 43, 131) 33.33%,
+        rgb(199, 76, 107) 66.66%,
+        rgb(136, 43, 131) 100%
+    );
+    background-size: 300% 300%;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #dddddd;
+    color: white;
     margin: 0;
+    animation: gradient 8s linear infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
 }
 
 main {
@@ -20,6 +74,7 @@ main {
     font-size: 4em;
     font-weight: bold;
     font-family: Georgia, "Times New Roman", Times, serif;
+    text-shadow: white 0px 0px 4px;
 }
 
 #links {
@@ -29,24 +84,23 @@ main {
 .link-button {
     display: inline-block;
     padding: 0.5em 0.5em;
-    border: 1px solid #000;
+    border: 1px solid white;
     border-radius: 20px;
-    background-color: #fff;
-    color: #000;
+    color: white;
     text-decoration: none;
     font-size: 1em;
     font-weight: bold;
     scale: 1;
-    transition: background-color 0.2s ease-in-out;
-    transition: scale 0.2s ease-out;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 0.2s ease, scale 0.2s ease, color 0.2s ease;
 }
 
 .link-button:hover {
-    background-color: #bbb;
-    scale: 1.041;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    scale: 1.03;
 }
 
 .link-button:active {
-    background-color: #888;
-    scale: 0.96;
+    scale: 0.98;
 }
